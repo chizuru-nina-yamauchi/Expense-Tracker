@@ -69,5 +69,16 @@ Remember to use the principles of object-oriented programming. Each class should
 
 ### Result
 
+![Result 1 photo](./main/java/Resources/result1.png)
+![Result 2 photo](./main/java/Resources/result2.png)
+![Result 3 photo](./main/java/Resources/result3.png)
+![Result 4 photo](./main/java/Resources/result4.png)
+![Result 5 photo](./main/java/Resources/result5.png)
+![Result 6 photo](./main/java/Resources/result6.png)
+![Result 7 photo](./main/java/Resources/result7.png)
+
 ### What I used
-Intellij, Java, Markdown
+Intellij, Java, Markdown, Terminal, GIT
+
+### What I used in Java files
+for each loop, ArrayList, LinkedList, Switch, getter and setter, constructor, toString method etc
