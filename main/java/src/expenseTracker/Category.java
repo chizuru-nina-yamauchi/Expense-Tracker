@@ -17,7 +17,7 @@ public class Category {
     public void addExpense(double amount, LocalDate date, String description){
         Expense expense = new Expense(categoryName, amount, date, description);
         expenses.add(expense);
-        System.out.println(expense);
+        System.out.println("Your new expense: " + expense);
 
     }
 

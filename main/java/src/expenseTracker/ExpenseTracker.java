@@ -18,9 +18,6 @@ public class ExpenseTracker {
         return  null;
     }
 
-
-
-
     public void addCategory(String categoryName){
         Category category = new Category(categoryName);
         categories.add(category);

@@ -49,7 +49,7 @@ public class Expense {
 
     @Override
     public String toString() {
-        return "Category{" +
+        return "Expense{" +
                 "category='" + category + '\'' +
                 ", amount=" + amount +
                 ", date=" + date +

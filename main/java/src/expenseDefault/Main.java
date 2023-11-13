@@ -8,13 +8,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.DuplicateFormatFlagsException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         ExpenseTracker expenseTracker = new ExpenseTracker();
-        ArrayList<Expense> expense = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
@@ -39,7 +37,7 @@ public class Main {
 
                             case 1:
                                 System.out.println("Enter category: ");
-                                String categoryName = input.nextLine();
+                                String category = input.nextLine();
 
                                 System.out.println("Enter the price(Use only number):");
                                 String amountInput = input.nextLine();
@@ -53,13 +51,10 @@ public class Main {
                                 System.out.println("Enter the description of the reasons of the usage: ");
                                 String description = input.nextLine();
 
-                                System.out.println("Your new expense: ");
-                                Category selectedCategory = expenseTracker.getCategoryByName(categoryName);
-                                if (selectedCategory != null) {
-                                    selectedCategory.addExpense(amount, date, description);
-                                } else {
-                                    System.out.println("New category added." + expense);
-                                }
+                                expenseTracker.addCategory(category);
+                                expenseTracker.getCategoryByName(category).addExpense(amount, date, description);
+
+
 
                                 break;
 
@@ -88,6 +83,7 @@ public class Main {
 
                             case 4:
                                 expenseTracker.calculateTotalExpenses();
+
                                 break;
 
                             case 5:
