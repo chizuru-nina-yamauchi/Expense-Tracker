@@ -32,6 +32,8 @@ public class Category {
         }
 
     }
+
+
     public double calculateTotalExpense(){
         double total = 0;
         for(Expense expense : expenses){

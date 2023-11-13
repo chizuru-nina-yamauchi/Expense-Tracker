@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class ExpenseTracker {
     private ArrayList<Category> categories;
 
-
     public ExpenseTracker(){
         categories = new ArrayList<>();
     }
@@ -19,8 +18,11 @@ public class ExpenseTracker {
     }
 
     public void addCategory(String categoryName){
-        Category category = new Category(categoryName);
-        categories.add(category);
+        Category existingCategory = getCategoryByName(categoryName);
+        if(existingCategory == null){
+            Category category = new Category(categoryName);
+            categories.add(category);
+        }
     }
 
     public void removeCategory(String categoryName){
