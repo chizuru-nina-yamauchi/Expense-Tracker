@@ -61,7 +61,7 @@ public class Main {
                                 String categoryToRemoveExpense = input.nextLine();
                                 Category categoryToRemove = expenseTracker.getCategoryByName(categoryToRemoveExpense);
                                 if (categoryToRemove != null) {
-                                    System.out.println("Enter the date for the expense you want to remove");
+                                    System.out.println("Enter the date for the expense you want to remove(Use this date format: dd-mm-yyyy)");
                                     String dateInfo = input.nextLine();
                                     LocalDate dateToRemove = LocalDate.parse(dateInfo, formatter);
                                     categoryToRemove.removeExpense(dateToRemove);
